@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="RecyclerViewDataBinding">
+
+        <variable
+            name="recyclerViewData"
+            type="com.user.indexedrecyclerview.RecyclerViewDataModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recyclerViewItemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/xx_small">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/leftIcon"
+                android:layout_width="@dimen/list_item_default_left_icon_size"
+                android:layout_height="@dimen/list_item_default_left_icon_size"
+                android:layout_marginStart="@dimen/screen_padding_default"
+                android:foregroundGravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_adb_black_24dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_padding_default"
+                android:text="@{recyclerViewData.title}"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/leftIcon"
+                app:layout_constraintStart_toEndOf="@id/leftIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginStart="@dimen/screen_padding_default"
+                app:layout_goneMarginTop="@dimen/x_small" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_padding_default"
+                android:layout_marginTop="@dimen/xxx_small"
+                android:text="@{recyclerViewData.info_collected}"
+                app:layout_constraintEnd_toStartOf="@id/rightIcon"
+                app:layout_constraintStart_toEndOf="@id/leftIcon"
+                app:layout_constraintTop_toBottomOf="@id/txtTitle"
+                app:layout_goneMarginEnd="0dp"
+                app:layout_goneMarginStart="@dimen/screen_padding_default" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionStub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_padding_default"
+                android:layout_marginTop="@dimen/xxx_small"
+                android:inflatedId="@+id/txtDescription"
+                android:text="@{recyclerViewData.info_used}"
+                app:layout_constraintEnd_toStartOf="@id/rightIcon"
+                app:layout_constraintStart_toEndOf="@id/leftIcon"
+                app:layout_constraintTop_toBottomOf="@id/txtSubtitle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rightIcon"
+                android:layout_width="@dimen/list_item_right_icon_size"
+                android:layout_height="@dimen/list_item_right_icon_size"
+                android:layout_marginEnd="@dimen/xx_small"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideLine"
+                style="@style/WrapContentLayout"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/list_item_right_guideline_constraint_percent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+
+

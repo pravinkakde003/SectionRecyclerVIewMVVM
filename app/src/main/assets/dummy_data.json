@@ -1,0 +1,62 @@
+[
+  {
+    "title": "American Airlines",
+    "type": "Breaches",
+    "info_collected": "10/3",
+    "info_used": "2/3"
+  },
+  {
+    "title": "Apple",
+    "type": "Activity",
+    "info_collected": "3/9",
+    "info_used": "7/2"
+  },
+  {
+    "title": "ZBed, Bath & Beyond",
+    "type": "Breaches",
+    "info_collected": "2/8",
+    "info_used": "6/5"
+  },
+  {
+    "title": "Bumble",
+    "type": "Activity",
+    "info_collected": "6/8",
+    "info_used": "9/7"
+  },
+  {
+    "title": "Mapple",
+    "type": "Activity",
+    "info_collected": "3/9",
+    "info_used": "7/2"
+  },
+  {
+    "title": "Cloud",
+    "type": "Breaches",
+    "info_collected": "2/8",
+    "info_used": "6/5"
+  },
+  {
+    "title": "Data Privacy",
+    "type": "Activity",
+    "info_collected": "6/8",
+    "info_used": "9/7"
+  },
+  {
+    "title": "Port",
+    "type": "Activity",
+    "info_collected": "3/9",
+    "info_used": "7/2"
+  },
+  {
+    "title": "Franc",
+    "type": "Breaches",
+    "info_collected": "2/8",
+    "info_used": "6/5"
+  },
+  {
+    "title": "Privacy",
+    "type": "Activity",
+    "info_collected": "6/8",
+    "info_used": "9/7"
+  }
+]
